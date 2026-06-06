@@ -1,0 +1,86 @@
+// Version: 1.0.0
+type Data__159895909<T> = {var count : Nat__490723111; elements : [var ?T]};
+type Internal__667636161<T> =
+  {children : [var ?Node__92254746<T>]; data : Data__159895909<T>};
+type Leaf__520550824<T> = {data : Data__159895909<T>};
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Node__92254746<T> =
+  {#internal : Internal__667636161<T>; #leaf : Leaf__520550824<T>};
+type ProductId__160010635 = Nat;
+type ProductId__442338476 = ProductId__160010635;
+type ProductId__508465781 = ProductId__160010635;
+type ProductId__98303184 = ProductId__160010635;
+type ProductInternal__78354269 =
+  {
+    var category : Text;
+    createdAt : Timestamp__77860887;
+    var description : Text;
+    id : ProductId__442338476;
+    var imageUrl : Text;
+    var lowStockThreshold : Nat;
+    var name : Text;
+    var purchasePrice : Float;
+    var quantity : Nat;
+    var salePrice : Float;
+    var updatedAt : Timestamp__77860887
+  };
+type PurchaseId__401731519 = Nat;
+type PurchaseId__945002328 = PurchaseId__401731519;
+type PurchaseRecord__772147374 =
+  {
+    cost : Float;
+    createdAt : Timestamp__429721593;
+    date : Timestamp__429721593;
+    id : PurchaseId__945002328;
+    notes : Text;
+    productId : ProductId__98303184;
+    quantity : Nat;
+    supplierName : Text
+  };
+type SaleId__652775874 = SaleId__807252808;
+type SaleId__807252808 = Nat;
+type SaleRecord__816588212 =
+  {
+    createdAt : Timestamp__439341042;
+    customerName : Text;
+    date : Timestamp__439341042;
+    id : SaleId__652775874;
+    notes : Text;
+    productId : ProductId__508465781;
+    quantitySold : Nat;
+    salePrice : Float
+  };
+type SessionToken__731358949 = Text;
+type Timestamp__301639476 = Int;
+type Timestamp__429721593 = Timestamp__301639476;
+type Timestamp__439341042 = Timestamp__301639476;
+type Timestamp__77860887 = Timestamp__301639476;
+actor {
+  stable nextProductId : [var Nat];
+  stable nextPurchaseId : [var Nat];
+  stable nextSaleId : [var Nat];
+  stable products :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?ProductInternal__78354269]];
+      var elementIndex : Nat__490723111
+    };
+  stable purchases :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?PurchaseRecord__772147374]];
+      var elementIndex : Nat__490723111
+    };
+  stable sales :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?SaleRecord__816588212]];
+      var elementIndex : Nat__490723111
+    };
+  stable sessions :
+    {
+      var root : Node__92254746<SessionToken__731358949>;
+      var size : Nat__490723111
+    }
+};
