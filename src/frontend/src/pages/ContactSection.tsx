@@ -149,10 +149,11 @@ export default function ContactSection() {
                       htmlFor="contact-name"
                       className="text-xs font-medium text-muted-foreground block mb-1.5"
                     >
-                      {t.contact.name} *
+                      {t.contact.name} 
                     </label>
                     <input
                       id="contact-name"
+                     name="name"
                       type="text"
                       required
                       value={form.name}
@@ -172,6 +173,7 @@ export default function ContactSection() {
                     </label>
                     <input
                       id="contact-company"
+                      name="company"
                       type="text"
                       value={form.company}
                       onChange={(e) =>
@@ -193,6 +195,7 @@ export default function ContactSection() {
                     </label>
                     <input
                       id="contact-email"
+                      name="email"
                       type="email"
                       required
                       value={form.email}
@@ -212,6 +215,7 @@ export default function ContactSection() {
                     </label>
                     <input
                       id="contact-phone"
+                      name="phone"
                       type="tel"
                       value={form.phone}
                       onChange={(e) =>
@@ -232,6 +236,7 @@ export default function ContactSection() {
                   </label>
                   <textarea
                     id="contact-message"
+                    name="message"
                     required
                     rows={4}
                     value={form.message}
