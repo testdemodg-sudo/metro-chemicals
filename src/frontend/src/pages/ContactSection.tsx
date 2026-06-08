@@ -13,9 +13,9 @@ export default function ContactSection() {
     phone: "",
     message: "",
   });
-  const [submitted, setSubmitted] = useState(false);
+const _handleSubmit = () => {}
 
-  const handleSubmit = (e: React.FormEvent) => {
+  
     e.preventDefault();
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 5000);
