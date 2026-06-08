@@ -50,15 +50,15 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-card">
-      <div className="container mx-auto px-4">
-        <div
-          ref={ref}
-          className="animate-on-scroll text-center max-w-3xl mx-auto mb-16"
-        >
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 mb-4 uppercase tracking-widest">
-            Contact
-          </span>
+  <section id="contact" className="py-24 bg-card">
+    <div className="container mx-auto px-4">
+      <div
+        ref={ref}
+        className="animate-on-scroll text-center max-w-3xl mx-auto mb-16"
+      >
+        <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 mb-4 uppercase tracking-widest">
+          Contact
+        </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
             {t.contact.title}
           </h2>
@@ -262,4 +262,5 @@ export default function ContactSection() {
       </div>
     </section>
   );
+}
 
