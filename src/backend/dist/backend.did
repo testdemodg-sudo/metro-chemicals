@@ -1,0 +1,138 @@
+type UpdateProductInput = 
+ record {
+   category: opt text;
+   description: opt text;
+   id: ProductId;
+   imageUrl: opt text;
+   lowStockThreshold: opt nat;
+   name: opt text;
+   purchasePrice: opt float64;
+   quantity: opt nat;
+   salePrice: opt float64;
+ };
+type Timestamp = int;
+type SessionToken = text;
+type SaleRecord = 
+ record {
+   createdAt: Timestamp;
+   customerName: text;
+   date: Timestamp;
+   id: SaleId;
+   notes: text;
+   productId: ProductId;
+   quantitySold: nat;
+   salePrice: float64;
+ };
+type SaleId = nat;
+type PurchaseRecord = 
+ record {
+   cost: float64;
+   createdAt: Timestamp;
+   date: Timestamp;
+   id: PurchaseId;
+   notes: text;
+   productId: ProductId;
+   quantity: nat;
+   supplierName: text;
+ };
+type PurchaseId = nat;
+type ProductId = nat;
+type Product = 
+ record {
+   category: text;
+   createdAt: Timestamp;
+   description: text;
+   id: ProductId;
+   imageUrl: text;
+   lowStockThreshold: nat;
+   name: text;
+   purchasePrice: float64;
+   quantity: nat;
+   salePrice: float64;
+   updatedAt: Timestamp;
+ };
+type LoginResult = 
+ variant {
+   err: text;
+   ok: SessionToken;
+ };
+type LoginInput = 
+ record {
+   password: text;
+   username: text;
+ };
+type InventoryStatus = 
+ record {
+   isLowStock: bool;
+   product: Product;
+ };
+type CreateSaleInput = 
+ record {
+   customerName: text;
+   date: Timestamp;
+   notes: text;
+   productId: ProductId;
+   quantitySold: nat;
+   salePrice: float64;
+ };
+type CreatePurchaseInput = 
+ record {
+   cost: float64;
+   date: Timestamp;
+   notes: text;
+   productId: ProductId;
+   quantity: nat;
+   supplierName: text;
+ };
+type CreateProductInput = 
+ record {
+   category: text;
+   description: text;
+   imageUrl: text;
+   lowStockThreshold: nat;
+   name: text;
+   purchasePrice: float64;
+   quantity: nat;
+   salePrice: float64;
+ };
+type ApiResult_3 = 
+ variant {
+   err: text;
+   ok: PurchaseRecord;
+ };
+type ApiResult_2 = 
+ variant {
+   err: text;
+   ok: SaleRecord;
+ };
+type ApiResult_1 = 
+ variant {
+   err: text;
+   ok: bool;
+ };
+type ApiResult = 
+ variant {
+   err: text;
+   ok: Product;
+ };
+service : {
+  adminLogin: (input: LoginInput) -> (LoginResult);
+  adminLogout: (token: SessionToken) -> (bool);
+  createProduct: (token: SessionToken, input: CreateProductInput) ->
+   (ApiResult);
+  createPurchaseRecord: (token: SessionToken, input: CreatePurchaseInput) ->
+   (ApiResult_3);
+  createSaleRecord: (token: SessionToken, input: CreateSaleInput) ->
+   (ApiResult_2);
+  deleteProduct: (token: SessionToken, id: ProductId) -> (ApiResult_1);
+  getAllProducts: () -> (vec Product) query;
+  getAllPurchaseRecords: (token: SessionToken) -> (vec PurchaseRecord) query;
+  getAllSaleRecords: (token: SessionToken) -> (vec SaleRecord) query;
+  getInventoryStatus: () -> (vec InventoryStatus) query;
+  getProductById: (id: ProductId) -> (opt Product) query;
+  isAdminAuthenticated: (token: SessionToken) -> (bool) query;
+  updateLowStockThreshold: (token: SessionToken, id: ProductId, threshold:
+   nat) -> (ApiResult);
+  updateProduct: (token: SessionToken, input: UpdateProductInput) ->
+   (ApiResult);
+}

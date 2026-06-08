@@ -1,0 +1,26 @@
+{
+  "overview": "Metro Chemicals is a premium pharma chemicals company website with a complete admin panel for managing products, purchases, sales, and inventory. Features a modern glassmorphism design, AI chatbot, dark mode, English/Hindi language support, and 9 interactive homepage sections.",
+  "features": [
+    "9 interactive homepage sections (Hero, About, Products, Manufacturing, Certification, Export, Global Presence, Testimonials, Contact)",
+    "Secure admin panel with product management, purchase records, sales tracking, and inventory management",
+    "Product image uploads via object storage",
+    "AI chatbot tailored for pharma chemicals purchase/sale",
+    "Dark mode toggle with localStorage persistence",
+    "English/Hindi language switcher",
+    "Animated loading screen and scroll-triggered animations",
+    "3D card hover effects and glassmorphism design",
+    "Sticky navbar with blur effect",
+    "SEO optimized structure"
+  ],
+  "category": "business",
+  "tags": [
+    "pharma",
+    "chemicals",
+    "admin-panel",
+    "glassmorphism",
+    "dark-mode",
+    "multilingual",
+    "product-management"
+  ],
+  "last_updated": "2026-04-14T07:13:19.313Z"
+}
