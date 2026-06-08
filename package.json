@@ -6,6 +6,7 @@
     "pnpm": ">=7.0.0",
     "npm": "please use pnpm"
   },
+<<<<<<< HEAD
  "scripts": {
   "build": "pnpm -r --if-present run build",
   "typecheck": "pnpm -r --if-present run typecheck",
@@ -19,4 +20,19 @@
 "dependencies": {
   "@caffeineai/core-infrastructure": "^0.2.0"
 }
+=======
+  "scripts": {
+    "build": "pnpm -r --if-present run build",
+    "typecheck": "pnpm -r --if-present run typecheck",
+    "check": "pnpm -r --if-present run check",
+    "fix": "pnpm -r --if-present run fix",
+    "bindgen": "caffeine-bindgen --did-file ./src/backend/dist/backend.did --out-dir ./src/frontend/src --actor-interface-file --force"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.4"
+  },
+  "dependencies": {
+    "@caffeineai/core-infrastructure": "^0.2.0"
+  }
+>>>>>>> 8eb9cdc7db3cd002557f1f7df562fcca3a9c9cbe
 }

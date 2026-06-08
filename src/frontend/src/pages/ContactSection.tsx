@@ -13,11 +13,15 @@ export default function ContactSection() {
     phone: "",
     message: "",
   });
+<<<<<<< HEAD
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+=======
+
+>>>>>>> 8eb9cdc7db3cd002557f1f7df562fcca3a9c9cbe
     setTimeout(() => setSubmitted(false), 5000);
     setForm({ name: "", company: "", email: "", phone: "", message: "" });
   };
@@ -54,6 +58,7 @@ export default function ContactSection() {
   ];
 
   return (
+<<<<<<< HEAD
     <section id="contact" className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div
@@ -63,6 +68,17 @@ export default function ContactSection() {
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 mb-4 uppercase tracking-widest">
             Contact
           </span>
+=======
+  <section id="contact" className="py-24 bg-card">
+    <div className="container mx-auto px-4">
+      <div
+        ref={ref}
+        className="animate-on-scroll text-center max-w-3xl mx-auto mb-16"
+      >
+        <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 mb-4 uppercase tracking-widest">
+          Contact
+        </span>
+>>>>>>> 8eb9cdc7db3cd002557f1f7df562fcca3a9c9cbe
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
             {t.contact.title}
           </h2>
@@ -138,7 +154,11 @@ export default function ContactSection() {
                 </p>
               </div>
             ) : (
+<<<<<<< HEAD
           <form
+=======
+             <form
+>>>>>>> 8eb9cdc7db3cd002557f1f7df562fcca3a9c9cbe
   action="https://formsubmit.co/metro.chemicalsofficial@gmail.com"
   method="POST"
   className="space-y-4"
@@ -149,10 +169,18 @@ export default function ContactSection() {
                       htmlFor="contact-name"
                       className="text-xs font-medium text-muted-foreground block mb-1.5"
                     >
+<<<<<<< HEAD
                       {t.contact.name} *
                     </label>
                     <input
                       id="contact-name"
+=======
+                      {t.contact.name} 
+                    </label>
+                    <input
+                      id="contact-name"
+                     name="name"
+>>>>>>> 8eb9cdc7db3cd002557f1f7df562fcca3a9c9cbe
                       type="text"
                       required
                       value={form.name}
@@ -172,6 +200,10 @@ export default function ContactSection() {
                     </label>
                     <input
                       id="contact-company"
+<<<<<<< HEAD
+=======
+                      name="company"
+>>>>>>> 8eb9cdc7db3cd002557f1f7df562fcca3a9c9cbe
                       type="text"
                       value={form.company}
                       onChange={(e) =>
@@ -193,6 +225,10 @@ export default function ContactSection() {
                     </label>
                     <input
                       id="contact-email"
+<<<<<<< HEAD
+=======
+                      name="email"
+>>>>>>> 8eb9cdc7db3cd002557f1f7df562fcca3a9c9cbe
                       type="email"
                       required
                       value={form.email}
@@ -212,6 +248,10 @@ export default function ContactSection() {
                     </label>
                     <input
                       id="contact-phone"
+<<<<<<< HEAD
+=======
+                      name="phone"
+>>>>>>> 8eb9cdc7db3cd002557f1f7df562fcca3a9c9cbe
                       type="tel"
                       value={form.phone}
                       onChange={(e) =>
@@ -232,6 +272,10 @@ export default function ContactSection() {
                   </label>
                   <textarea
                     id="contact-message"
+<<<<<<< HEAD
+=======
+                    name="message"
+>>>>>>> 8eb9cdc7db3cd002557f1f7df562fcca3a9c9cbe
                     required
                     rows={4}
                     value={form.message}
@@ -251,6 +295,7 @@ export default function ContactSection() {
                 >
                   <Send className="w-4 h-4" />
                   {t.contact.send}
+<<<<<<< HEAD
                 </button><input type="hidden" name="_captcha" value="false" />
 <input
   type="hidden"
@@ -258,6 +303,11 @@ export default function ContactSection() {
   value="New Inquiry from Metro Chemicals Website"
 />
 
+=======
+                </button>
+               <input type="hidden" name="_captcha" value="false" />
+<input type="hidden" name="_subject" value="New Inquiry from Metro Chemicals Website" />
+>>>>>>> 8eb9cdc7db3cd002557f1f7df562fcca3a9c9cbe
               </form>
             )}
           </div>
@@ -266,3 +316,7 @@ export default function ContactSection() {
     </section>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8eb9cdc7db3cd002557f1f7df562fcca3a9c9cbe

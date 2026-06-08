@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+<<<<<<< HEAD
  "scripts": {
   "dev": "vite",
   "build": "vite build && pnpm copy:env",
@@ -11,6 +12,16 @@
   "check": "biome check src",
   "fix": "biome check --write src"
 },
+=======
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && pnpm copy:env",
+    "copy:env": "cp env.json dist/",
+    "typecheck": "tsc --noEmit",
+    "check": "biome check src",
+    "fix": "biome check --write src"
+  },
+>>>>>>> 8eb9cdc7db3cd002557f1f7df562fcca3a9c9cbe
   "devDependencies": {
     "@biomejs/biome": "^1.9.0",
     "@tailwindcss/container-queries": "^0.1.1",
