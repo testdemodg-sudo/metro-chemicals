@@ -13,11 +13,7 @@ export default function ContactSection() {
     phone: "",
     message: "",
   });
-const _handleSubmit = () => {}
 
-  
-    e.preventDefault();
-    setSubmitted(true);
     setTimeout(() => setSubmitted(false), 5000);
     setForm({ name: "", company: "", email: "", phone: "", message: "" });
   };
