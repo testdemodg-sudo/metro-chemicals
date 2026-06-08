@@ -138,7 +138,11 @@ export default function ContactSection() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+             <form
+  action="https://formsubmit.co/metro.chemicalsofficial@gmail.com"
+  method="POST"
+  className="space-y-4"
+>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label
@@ -248,6 +252,8 @@ export default function ContactSection() {
                   <Send className="w-4 h-4" />
                   {t.contact.send}
                 </button>
+               <input type="hidden" name="_captcha" value="false" />
+<input type="hidden" name="_subject" value="New Inquiry from Metro Chemicals Website" />
               </form>
             )}
           </div>
