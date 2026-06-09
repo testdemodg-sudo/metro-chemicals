@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
-    "strict": true,
     "target": "ES2020",
-    "experimentalDecorators": true,
-    "strictPropertyInitialization": false,
+    "module": "ESNext",
     "moduleResolution": "node",
+    "jsx": "react-jsx",
+
+    "strict": true,
     "allowJs": true,
-    "outDir": "HACK_BECAUSE_OF_ALLOW_JS"
-  }
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false
+  },
+  "include": ["src"]
 }
