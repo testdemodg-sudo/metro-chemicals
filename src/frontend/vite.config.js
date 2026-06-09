@@ -15,6 +15,7 @@ process.env.STORAGE_GATEWAY_URL =
 export default defineConfig({
   logLevel: "error",
   build: {
+    outDir: "dist",
     emptyOutDir: true,
     sourcemap: false,
     minify: false,

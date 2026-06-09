@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd src/frontend && pnpm install && pnpm run build",
+  "outputDirectory": "src/frontend/dist",
+  "framework": "vite",
+  "env": {
+    "CANISTER_ID_BACKEND": "@CANISTER_ID_BACKEND",
+    "DFX_NETWORK": "ic",
+    "II_URL": "@II_URL",
+    "STORAGE_GATEWAY_URL": "@STORAGE_GATEWAY_URL"
+  }
+}
